@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="">
     
     
     
     
     
     
-    <title>我的第一篇文章 | 宋庆祥的博客</title>
+    <title>我的第一篇文章 | 爱吃猫的鱼的博客</title>
     <link href="http://example.com" rel="prefetch" />
 
     
@@ -91,7 +91,7 @@
                     }
                 </style>
                 <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">宋庆祥的博客</div>
+                <div class="navbar-brand">爱吃猫的鱼的博客</div>
                 
             </a>
         </div>
@@ -154,7 +154,7 @@
 <article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
-        <a href="http://example.com">宋庆祥的博客</a>
+        <a href="http://example.com">爱吃猫的鱼的博客</a>
         >
         <span>我的第一篇文章</span>
     </div>
@@ -192,12 +192,87 @@
     </div>
     <div class="content-article">
         <h1 id="博客入门编写教程"><a href="#博客入门编写教程" class="headerlink" title="博客入门编写教程"></a>博客入门编写教程</h1><p>本文物理地址为D:\Blog\Blog\source_posts<br>在 第二个Blog目录下  运行 hexo clean （）</p>
-<p>##运行指令<br>hexo n/new + 文章名称        新建文章<br>hexo s/server            在线预览<br>hexo clean                清理<br>hexo g                    生成<br>hexo d                    部署到GitHub仓库里<br>hexo s                    一键部署<br>##目录的生成<br>###第一种<br>一级标题    # + 空格<br>二级标题    ## + 空格<br>三级标题    ### + 空格<br>以此类推 最多6级<br>例子：</p>
-<h1 id="我是一级标题"><a href="#我是一级标题" class="headerlink" title="我是一级标题"></a>我是一级标题</h1><p>###第二种<br>在标题下加 -（中间破折号）或者 = （等于号） 数量大于一个就行<br>例子：<br>一级标题<br>=============<br>二级标题</p>
+<h2 id="运行指令"><a href="#运行指令" class="headerlink" title="运行指令"></a>运行指令</h2><p>hexo n/new + 文章名称        新建文章<br>hexo s/server            在线预览<br>hexo clean                清理<br>hexo g                    生成<br>hexo d                    部署到GitHub仓库里<br>hexo s                    部署在本地（可一遍修改文件，一遍查看页面，<a target="_blank" rel="noopener" href="http://localhost:4000/%EF%BC%89">http://localhost:4000/）</a></p>
 <hr>
-<p>###第三种<br>在标题前后都加 #<br>例子：</p>
-<h1 id="第一级"><a href="#第一级" class="headerlink" title="第一级"></a>第一级</h1><h2 id="第二级"><a href="#第二级" class="headerlink" title="第二级"></a>第二级</h2><p>|:项目:|:Value:|<br>….|…..<br>|:一:|:111:|<br>|:二 | 222:|<br>|三: |:333 |</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><hr>
+<h2 id="目录的生成"><a href="#目录的生成" class="headerlink" title="目录的生成"></a>目录的生成</h2><h3 id="标题的生成"><a href="#标题的生成" class="headerlink" title="标题的生成"></a>标题的生成</h3><p>一级标题    # + 空格<br>二级标题    ## + 空格<br>三级标题    ### + 空格<br>以此类推 最多6级<br>或者是 # + 空格 + 标题 + 空格 + #  这是一级标题</p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用方法：*/+/- + 空格 + 列表名 ，可以用 *，+，-来创建  </p>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3>使用方法：数字+.(英文的点)+空格+ 列表名，特别注意，有序列表的序号是根据第一行列表的数字顺序来的</li>
+</ul>
+<ol>
+<li>列表1 </li>
+<li>列表2</li>
+<li>列表3<ol>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="区块应用"><a href="#区块应用" class="headerlink" title="区块应用"></a>区块应用</h2><p>使用方法： * + 文字<br>    &gt; 引用第一层文字<br>    &gt;&gt; 引用第二层文字</p>
+<ul>
+<li>兴趣是最好的老师。<blockquote>
+<p>这是爱因斯坦说的</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>可以用*-_(星号，减号，底线) 至少3个符号表示，可以不连续 有空格也可以</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h3><p>使用方法：[文字]（链接）<br><a href="www.baidu.com">百度</a></p>
+<hr>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>行内式使用方法：![文字]（链接）<br><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201211%2F04%2F20121104194249_nzJij.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654951160&t=e935c2ef0670ba97798d9ecc19b76ef5" alt="猫"><br>这里有只<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0314%252F94ad46dbj00qpy1do0021d200rs00rsg008t008t.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654955296&t=9d818cccdd6cf7f453f9805ad577cc51" alt="图"></p>
+<hr>
+<h2 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a>代码框</h2><p>单行用 1个(tab上边的那个)<code> + 代码 + 1个</code>(tab上边的那个)，<br>多行用 3个(tab上边的那个)<code> + 代码 + 3个</code>(tab上边的那个)<br><code>Hello，World！</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">多行代码</span><br><span class="line">第一行</span><br><span class="line">第二行</span><br><span class="line">第三行</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="表格-未解决"><a href="#表格-未解决" class="headerlink" title="表格(未解决)"></a>表格(未解决)</h2><table>
+<thead>
+<tr>
+<th align="left">wo</th>
+<th align="left">ni</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">2</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>1对*/_   倾斜    <em>字体</em><br>2对*/_   加粗    <strong>字体</strong></p>
+<hr>
+<h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2><p>大多数的字符都是 \ + 字符</p>
+<ul>
+<li>\</li>
+<li>`</li>
+<li>~</li>
+<li>*</li>
+</ul>
+<hr>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>使用方法：2对~~<br><del>请删除我</del></p>
 
     </div>
 </article>
@@ -221,7 +296,7 @@
     <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
         <div class="panel-heading" style="text-align: center">
             <i class="fa fa-quote-left"></i>
-            John Doe
+            
             <i class="fa fa-quote-right"></i>
         </div>
         <div class="author-panel text-center">
@@ -287,13 +362,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2022/04/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
+                    <a href="/2022/04/23/hello-world/">Hello World</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2022/04/23/hello-world/">Hello World</a>
+                    <a href="/2022/04/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
                 </span>
             </li>
             
@@ -372,7 +447,7 @@
     </div>
     <footer id="gal-footer">
     <div class="container">
-        Copyright © 2018 John Doe Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+        Copyright © 2018  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
     </div>
 </footer>
 
