@@ -16,7 +16,7 @@
 <meta property="og:description" content="通信协议这是我写的第一篇关于信息类的博客 IIC协议参考网址：IICIIC是一个多主从、串行总线、半双工、同步传输总线，使用两条线：SCL时钟线，SDA数据线，在使用时需要在两根线上添加上拉电阻5种状态：  IDLE状态（空闲状态） SCL、SDA高电平 ，无数据传输   START状态（开始状态） SCL高电平，SDA下降沿   STOP状态（结束状态） SCL高电平，SDA上升沿   ACK和">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-05-13T04:53:50.000Z">
-<meta property="article:modified_time" content="2022-05-13T12:39:04.987Z">
+<meta property="article:modified_time" content="2022-05-17T06:58:26.463Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="爱吃猫的鱼的博客" type="application/atom+xml">
@@ -213,7 +213,22 @@
 </ul>
 </li>
 </ol>
-
+<h2 id="SPI协议"><a href="#SPI协议" class="headerlink" title="SPI协议"></a>SPI协议</h2><h2 id="UART协议"><a href="#UART协议" class="headerlink" title="UART协议"></a>UART协议</h2><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/sternlycore/article/details/85244515">UART详解</a><br>通用异步收发传输器（Universal Asynchronous Receiver/Transmitter，通常称作UART） 是一种串行异步收发协议，应用十分广泛。UART工作原理是将数据的二进制位一位一位的进行传输。在UART通讯协议中信号线上的状态位高电平代表’1’低电平代表’0’。当然两个设备使用UART串口通讯时，必须先约定好传输速率和一些数据位。</p>
+<h3 id="硬件连接"><a href="#硬件连接" class="headerlink" title="硬件连接"></a>硬件连接</h3><p>硬件连接比较简单，仅需要3条线，注意连接时两个设备UART电平，如电平范围不一致请做电平转换后再连接</p>
+<ul>
+<li>TX：发送数据端，要接对面设备的RX</li>
+<li>RX：接收数据端，要接对面设备的TX</li>
+<li>GND：保证两设备共地，有统一的参考平面<h3 id="软件通信协议"><a href="#软件通信协议" class="headerlink" title="软件通信协议"></a>软件通信协议</h3>UART作为异步串口通信协议的一种，工作原理是将数据的字节一位接一位地传输。协议如下：<br>空闲位：<br>UART协议规定，当总线处于空闲状态时信号线的状态为‘1’即高电平</li>
+<li>起始位：<br>开始进行数据传输时发送方要先发出一个低电平’0’来表示传输字符的开始。因为空闲位一直是高电平所以开始第一次通讯时先发送一个明显区别于空闲状态的信号即为低电平。</li>
+<li>数据位：<br>起始位之后就是要传输的数据，数据可以是5，6，7，8，9位，构成一个字符，一般都是8位。先发送最低位最后发送最高位。</li>
+<li>奇偶校验位：<br>数据位传送完成后，要进行奇偶校验，校验位其实是调整个数，串口校验分几种方式：</li>
+</ul>
+<p>1.无校验（no parity）<br>2.奇校验（odd parity）：如果数据位中’1’的数目是偶数，则校验位为’1’，如果’1’的数目是奇数，校验位为’0’。<br>3.偶校验（even parity）：如果数据为中’1’的数目是偶数，则校验位为’0’，如果为奇数，校验位为’1’。<br>4.mark parity：校验位始终为1<br>5.space parity：校验位始终为0</p>
+<ul>
+<li>停止位：<br>数据结束标志，可以是1位，1.5位，2位的高电平。</li>
+<li>波特率：<br>数据传输速率使用波特率来表示，单位bps（bits per second），常见的波特率9600bps，115200bps等等，其他标准的波特率是1200，2400，4800，19200，38400，57600。举个例子，如果串口波特率设置为9600bps，那么传输一个比特需要的时间是1/9600≈104.2us。</li>
+</ul>
+<h2 id="JTAG"><a href="#JTAG" class="headerlink" title="JTAG"></a>JTAG</h2><h2 id="SWD"><a href="#SWD" class="headerlink" title="SWD"></a>SWD</h2><h2 id="CAN"><a href="#CAN" class="headerlink" title="CAN"></a>CAN</h2>
       
 
       

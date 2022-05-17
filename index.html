@@ -151,6 +151,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-排序算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/17/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">排序算法</a>
+    </h1>
+  
+
+        
+        <a href="/2022/05/17/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2022-05-17T03:55:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/17/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-个人博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,7 +234,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="个人博客搭建"><a href="#个人博客搭建" class="headerlink" title="个人博客搭建"></a>个人博客搭建</h1><p>本文参考自程序羊的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?share_source=copy_web">手把手教你从0开始搭建自己的博客</a></p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>首先下载<a href="www.nodejs.org">node.js</a><br>在终端中 输入 <code>node install</code><br>输入 <code>hexo s</code>  开始本地构建 在网址中输入 (<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>) 即可查看博客预览<br>输入<code>hexo n &quot;我是博客&quot;</code> 创建一个名为“我是博客”的博客<br>输入<code>hexo clean</code> 清理缓存<br>输入<code>hexo g </code>  生成博客<br>在GitHub上新建一个与用户名相同的仓库 例子：用户名.github.io<br>并将仓库设置为公开<br>打开_config..yml文件，在文件最后添加，如下：</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="www.nodejs.org">node.js</a>  <br><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git bash</a></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>成功安装node后在终端中 输入 <code>node install</code><br>输入 <code>hexo s</code>  开始本地构建 在网址中输入 (<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>) 即可查看博客预览<br>输入<code>hexo n &quot;我是博客&quot;</code> 创建一个名为“我是博客”的博客<br>输入<code>hexo clean</code> 清理缓存<br>输入<code>hexo g </code>  生成博客<br>在GitHub上新建一个与用户名相同的仓库 例子：用户名.github.io<br>并将仓库设置为公开<br>打开_config..yml文件，在文件最后添加，如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/1752627547/1752627547.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>输入<code>hexo d</code> 部署在远端 输入GitHub账号和密码</p>
 
@@ -277,7 +340,22 @@
 </ul>
 </li>
 </ol>
-
+<h2 id="SPI协议"><a href="#SPI协议" class="headerlink" title="SPI协议"></a>SPI协议</h2><h2 id="UART协议"><a href="#UART协议" class="headerlink" title="UART协议"></a>UART协议</h2><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/sternlycore/article/details/85244515">UART详解</a><br>通用异步收发传输器（Universal Asynchronous Receiver/Transmitter，通常称作UART） 是一种串行异步收发协议，应用十分广泛。UART工作原理是将数据的二进制位一位一位的进行传输。在UART通讯协议中信号线上的状态位高电平代表’1’低电平代表’0’。当然两个设备使用UART串口通讯时，必须先约定好传输速率和一些数据位。</p>
+<h3 id="硬件连接"><a href="#硬件连接" class="headerlink" title="硬件连接"></a>硬件连接</h3><p>硬件连接比较简单，仅需要3条线，注意连接时两个设备UART电平，如电平范围不一致请做电平转换后再连接</p>
+<ul>
+<li>TX：发送数据端，要接对面设备的RX</li>
+<li>RX：接收数据端，要接对面设备的TX</li>
+<li>GND：保证两设备共地，有统一的参考平面<h3 id="软件通信协议"><a href="#软件通信协议" class="headerlink" title="软件通信协议"></a>软件通信协议</h3>UART作为异步串口通信协议的一种，工作原理是将数据的字节一位接一位地传输。协议如下：<br>空闲位：<br>UART协议规定，当总线处于空闲状态时信号线的状态为‘1’即高电平</li>
+<li>起始位：<br>开始进行数据传输时发送方要先发出一个低电平’0’来表示传输字符的开始。因为空闲位一直是高电平所以开始第一次通讯时先发送一个明显区别于空闲状态的信号即为低电平。</li>
+<li>数据位：<br>起始位之后就是要传输的数据，数据可以是5，6，7，8，9位，构成一个字符，一般都是8位。先发送最低位最后发送最高位。</li>
+<li>奇偶校验位：<br>数据位传送完成后，要进行奇偶校验，校验位其实是调整个数，串口校验分几种方式：</li>
+</ul>
+<p>1.无校验（no parity）<br>2.奇校验（odd parity）：如果数据位中’1’的数目是偶数，则校验位为’1’，如果’1’的数目是奇数，校验位为’0’。<br>3.偶校验（even parity）：如果数据为中’1’的数目是偶数，则校验位为’0’，如果为奇数，校验位为’1’。<br>4.mark parity：校验位始终为1<br>5.space parity：校验位始终为0</p>
+<ul>
+<li>停止位：<br>数据结束标志，可以是1位，1.5位，2位的高电平。</li>
+<li>波特率：<br>数据传输速率使用波特率来表示，单位bps（bits per second），常见的波特率9600bps，115200bps等等，其他标准的波特率是1200，2400，4800，19200，38400，57600。举个例子，如果串口波特率设置为9600bps，那么传输一个比特需要的时间是1/9600≈104.2us。</li>
+</ul>
+<h2 id="JTAG"><a href="#JTAG" class="headerlink" title="JTAG"></a>JTAG</h2><h2 id="SWD"><a href="#SWD" class="headerlink" title="SWD"></a>SWD</h2><h2 id="CAN"><a href="#CAN" class="headerlink" title="CAN"></a>CAN</h2>
       
 
       
